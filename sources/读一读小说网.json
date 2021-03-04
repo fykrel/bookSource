@@ -1,0 +1,33 @@
+{
+    "name": "读一读小说网",
+    "url": "www.du1du.cc",
+    "version": 100,
+    "search": {
+        "url": "http://www.du1du.cc/s_${key}",
+		"charset": "utf-8",
+        "list": "ul.list_content",
+        "name": ".cc2>a",
+        "author": ".cc4>a",
+        "cover": "",
+        "detail": ".cc2>a"
+    },
+    "detail": {
+        "name": "h1>a:nth-child(1)",
+        "author": "div.w2>a",
+        "cover": "",
+        "summary": "div.desc",
+        "status": "",
+        "update": "div.w4@match->(?<=（20)(.+)(?=）)",
+        "lastChapter": "div.w4>a",
+        "catalog": ""
+    },
+    "catalog": {
+        "list": ".chapters>.chapter:gt(5)",
+        "name": "a",
+        "chapter": "a"
+    },
+    "chapter": {
+        "content": "#content",
+        "filter": ["@div"]
+    }
+}
